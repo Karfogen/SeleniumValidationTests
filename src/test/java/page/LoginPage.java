@@ -53,7 +53,7 @@ public class LoginPage {
     public void clickLogin() {
         driver.findElement(loginButton).click();
     }
-    //позитивчик
+    //позитвиный тест
     public void positiveCheck() {
         String textPozitive = driver.findElement(By.tagName("body")).getText();
 
@@ -65,7 +65,7 @@ public class LoginPage {
             throw e; // важно пробросить, чтобы тест всё равно упал!
         }
     }
-    // негативчик
+    // негативный тест
     public void negativeCheck() {
         String textPozitive = driver.findElement(By.tagName("body")).getText();
 
