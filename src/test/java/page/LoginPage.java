@@ -21,7 +21,6 @@ public class LoginPage {
         this.driver = driver;
     }
 
-
     // Методы взаимодействия
     public void enterUsername(String username) {
         driver.findElement(FirstnameField).sendKeys(username);
@@ -60,9 +59,9 @@ public class LoginPage {
 
         try {
             assertTrue(textPozitive.contains("Thanks for submitting the form"));
-            System.out.println("✅ Проверка прошла успешно");
+            System.out.println("Проверка прошла успешно");
         } catch (AssertionError e) {
-            System.out.println("❌ Ошибка проверки: сообщение не найдено!");
+            System.out.println("Ошибка проверки: сообщение не найдено!");
             throw e; // важно пробросить, чтобы тест всё равно упал!
         }
     }
@@ -72,9 +71,9 @@ public class LoginPage {
 
         try {
             assertFalse(textPozitive.contains("Thanks for submitting the form"));
-            System.out.println("✅ Негативный тест пройден");
+            System.out.println("Негативный тест пройден");
         } catch (AssertionError e) {
-            System.out.println("❌ Ошибка теста!");
+            System.out.println("Ошибка теста!");
             throw e; // важно пробросить, чтобы тест всё равно упал!
         }
     }
